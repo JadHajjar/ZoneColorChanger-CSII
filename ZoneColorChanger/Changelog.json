@@ -1,0 +1,16 @@
+[
+  {
+    "Stable": true,
+    "Version": "1.0.0",
+    "Date": "2024-05-26",
+    "ChangeGroups": [
+      {
+        "Name": "Changes",
+        "Changes": [
+          "Zones' thumbnails now match their respective custom color.",
+          "Fixed custom mixed-zone office zone types not showing in the panel."
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.zoneContainer {
+  flex: 1 1 0px;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.scrollableContainer {
+  max-height: 350rem;
+  padding: 0 5rem;
+}

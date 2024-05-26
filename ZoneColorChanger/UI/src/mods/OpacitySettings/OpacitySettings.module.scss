@@ -1,0 +1,31 @@
+.optionsContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.optionsContainer > div {
+  flex: 1 1 0px;
+}
+
+.sliders {
+  display: flex;
+}
+
+.sliders > div {
+  flex: 1 1 0px;
+  padding: 5rem 7.5rem 0 7.5rem;
+  border-radius: 5rem;
+}
+
+.sliders > div:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sliders span {
+  margin-top: 5rem;
+  text-transform: uppercase;
+  justify-content: center;
+  font-size: 12rem;
+  color: var(--textColorDim);
+}
