@@ -31,13 +31,14 @@ Thank you to Trejak and YenYang for helping out with the UI elements.
   <Screenshot Value="Properties/Screenshot_05.png" />
   <Tag Value="Code Mod" />
   <ForumLink Value="https://forum.paradoxplaza.com/forum/threads/zone-color-changer.1681601/" />
-  <ModVersion Value="1.0.0" />
+  <ModVersion Value="1.0.1" />
   <GameVersion Value="1.1.*" />
   <ChangeLog>
-# v1.0.0
+# v1.0.1
+*Testing*
+
 ## Changes
-* Zones' thumbnails now match their respective custom color.
-* Fixed custom mixed-zone office zone types not showing in the panel.
+* Fixed hanging when opening zoning toolbar.
 </ChangeLog>
   <ExternalLink Type="discord" Url="https://discord.gg/E4k8ZEtRxd" />
   <ExternalLink Type="github" Url="https://github.com/JadHajjar/ZoneColorChanger-CSII" />

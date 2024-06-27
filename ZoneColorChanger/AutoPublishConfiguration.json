@@ -1,0 +1,7 @@
+{
+  "ModName": "Zone Color Changer",
+  "ThumbnailUrl": "https://imgur.com/j1MKkYm.png",
+  "PublishConfigurationFile": "Properties\\PublishConfiguration.xml",
+  "ChangelogFile": "Changelog.json",
+  "Color": "255, 255, 255"
+}

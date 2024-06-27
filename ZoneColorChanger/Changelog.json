@@ -1,6 +1,19 @@
 [
   {
     "Stable": true,
+    "Version": "1.0.1",
+    "Date": "2024-05-26",
+    "ChangeGroups": [
+      {
+        "Name": "Changes",
+        "Changes": [
+          "Fixed hanging when opening zoning toolbar."
+        ]
+      }
+    ]
+  },
+  {
+    "Stable": true,
     "Version": "1.0.0",
     "Date": "2024-05-26",
     "ChangeGroups": [

@@ -84,6 +84,7 @@ namespace ZoneColorChanger.Systems
 			}
 
 			UpdateColors();
+			UpdateIcons();
 		}
 
 		internal void UpdateColors()

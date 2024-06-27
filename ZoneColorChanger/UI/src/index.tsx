@@ -5,6 +5,7 @@ import { ZonePanelButton } from "mods/ZonePanelButton/ZonePanelButton";
 import mod from "../mod.json";
 
 const register: ModRegistrar = (moduleRegistry) => {
+  console.log(mod.id + " UI module registering...");
   VanillaComponentResolver.setRegistry(moduleRegistry);
 
   moduleRegistry.append("Game", MainContainerComponent);

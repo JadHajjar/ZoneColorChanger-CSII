@@ -1,4 +1,10 @@
-﻿using Game.Tools;
+﻿using Colossal.Collections;
+
+using Game.Tools;
+using Game.UI.InGame;
+
+using System.Threading;
+using System.Threading.Tasks;
 
 using UnityEngine;
 
@@ -9,8 +15,9 @@ namespace ZoneColorChanger.Systems
 {
 	internal partial class ZoneChangerUISystem : ExtendedUISystemBase
 	{
-		private ZoneColorChangerSystem zoneChangerSystem;
 		private ToolSystem toolSystem;
+		private CancellationTokenSource cancellationTokenSource;
+		private ZoneColorChangerSystem zoneChangerSystem;
 		private ValueBindingHelper<bool> _ShowMainPanel;
 		private ValueBindingHelper<bool> _ZoneToolActive;
 		private ValueBindingHelper<ZoneGroupItem[]> _ZoneInfoList;
@@ -50,7 +57,10 @@ namespace ZoneColorChanger.Systems
 				ConfigUtil.Instance.IsDirty = false;
 
 				_ColorMode.Value = ConfigUtil.Instance.GetColorMode();
+
 				zoneChangerSystem.UpdateColors();
+
+				Task.Run(UpdateIcons);
 			}
 
 			base.OnUpdate();
@@ -59,11 +69,23 @@ namespace ZoneColorChanger.Systems
 		private void OnToolChanged(ToolBaseSystem system)
 		{
 			_ZoneToolActive.Value = system is ZoneToolSystem;
+		}
 
-			if (_ZoneToolActive)
-			{
-				zoneChangerSystem.UpdateIcons();
+		private async void UpdateIcons()
+		{
+			cancellationTokenSource?.Cancel();
+			cancellationTokenSource = new();
+
+			var token = cancellationTokenSource.Token;
+
+			await Task.Delay(1000);
+
+			if (token.IsCancellationRequested)
+			{ 
+				return; 
 			}
+
+			zoneChangerSystem.UpdateIcons();
 		}
 	}
 }
