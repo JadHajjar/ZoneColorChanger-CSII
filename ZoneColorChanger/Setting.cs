@@ -25,6 +25,9 @@ namespace ZoneColorChanger
 		[SettingsUISection(MainSection, OptionsGroup)]
 		public bool RecolorIcons { get; set; } = true;
 
+		[SettingsUISection(MainSection, OptionsGroup)]
+		public bool GroupThemes { get; set; } = true;
+
 		public override void SetDefaults()
 		{
 		}
@@ -48,6 +51,9 @@ namespace ZoneColorChanger
 
 				{ m_Setting.GetOptionLabelLocaleID(nameof(Setting.RecolorIcons)), "Change zones' icon color" },
 				{ m_Setting.GetOptionDescLocaleID(nameof(Setting.RecolorIcons)), $"When enabled, zones' icons will be updated to match the selected color. Changes take effect when re-opening the zones toolbar. Disabling this option requires a restart to take effect." },
+
+				{ m_Setting.GetOptionLabelLocaleID(nameof(Setting.GroupThemes)), "Group zone types' themes" },
+				{ m_Setting.GetOptionDescLocaleID(nameof(Setting.GroupThemes)), $"When enabled, zones with multiple themes (EU, NA, etc.) are grouped into one option." },
 			};
 		}
 

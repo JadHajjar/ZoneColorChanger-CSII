@@ -33,6 +33,11 @@ namespace ZoneColorChanger.Utilities
 			CustomAILPath = Path.Combine(EnvPath.kUserDataPath, "ModsData", "AssetIconLibrary", "CustomThumbnails");
 			TempFolder = Path.Combine(EnvPath.kTempDataPath, nameof(ZoneColorChanger));
 
+			if (Directory.Exists(TempFolder))
+			{
+				new DirectoryInfo(TempFolder).Delete(true);
+			}
+
 			Directory.CreateDirectory(TempFolder);
 		}
 

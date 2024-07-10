@@ -1,6 +1,34 @@
 [
   {
     "Stable": true,
+    "Version": "1.1.0",
+    "Date": "2024-07-10",
+    "ChangeGroups": [
+      {
+        "Name": "Changes",
+        "Changes": [
+          "Added an option to un-group zones' themes. This allows you to assign different colors for EU/NA zone types.",
+          "Reworked color-blind settings, converting it to an automatic color conversion which allows Zone Color Changer to also convert any custom zones, or future vanilla zones based on their base color.",
+          "Temporary folder is now cleared on startup too, instead of just on exit."
+        ]
+      }
+    ]
+  },
+  {
+    "Stable": true,
+    "Version": "1.0.2",
+    "Date": "2024-07-03",
+    "ChangeGroups": [
+      {
+        "Name": "Changes",
+        "Changes": [
+          "Compatibility with patch 1.1.6."
+        ]
+      }
+    ]
+  },
+  {
+    "Stable": true,
     "Version": "1.0.1",
     "Date": "2024-05-26",
     "ChangeGroups": [

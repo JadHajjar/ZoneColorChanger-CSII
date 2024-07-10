@@ -51,7 +51,7 @@ namespace ZoneColorChanger.Utilities
 		{
 			if (_config.Mode != ColorMode.Custom)
 			{
-				_config.ZoneColors = ColorblindPresets.GetColorTable(_config.Mode);
+				_config.ZoneColors = new();
 				_config.Mode = ColorMode.Custom;
 			}
 

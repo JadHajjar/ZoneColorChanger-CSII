@@ -67,7 +67,7 @@ namespace ZoneColorChanger.Systems
 			for (var i = 0; i < prefabData.Length; i++)
 			{
 				var prefab = prefabSystem.GetPrefab<ZonePrefab>(prefabData[i]);
-				var name = Regex.Replace(prefab.name, "^[A-Z]{2} ", string.Empty);
+				var name = Mod.Settings.GroupThemes ? Regex.Replace(prefab.name, "^[A-Z]{2} ", string.Empty) : prefab.name;
 
 				_vanillaColors[name] = prefab.m_Color;
 
@@ -85,6 +85,8 @@ namespace ZoneColorChanger.Systems
 
 			UpdateColors();
 			UpdateIcons();
+
+			Enabled = false;
 		}
 
 		internal void UpdateColors()
@@ -164,17 +166,18 @@ namespace ZoneColorChanger.Systems
 
 		private Color GetColor(string key, bool withSnow)
 		{
-			var mode = ConfigUtil.Instance.GetColorMode();
+			var unZoned = key is "Unzoned";
+			var mode = unZoned ? ColorMode.Default : ConfigUtil.Instance.GetColorMode();
 			var color = mode switch
 			{
 				ColorMode.Default => _vanillaColors[key],
 				ColorMode.Custom => ConfigUtil.Instance.TryGetCustomColor(key, out var customColor) ? customColor : _vanillaColors[key],
-				_ => ColorblindPresets.GetColorTable(mode).TryGetValue(key, out var colorBlindColor) ? colorBlindColor : _vanillaColors[key],
+				_ => ColorblindUtil.ConvertColor(_vanillaColors[key], mode),
 			};
 
 			if (withSnow && snowDetectionSystem.AverageSnowCoverage > 8f)
 			{
-				color.Lum = key is "Unzoned" ? 0f : Mathf.Clamp01(1.2f - color.Lum);
+				color.Lum = unZoned ? 0f : Mathf.Clamp01(1.2f - color.Lum);
 				color.Sat = Mathf.Clamp01(color.Sat * 1.3f);
 			}
 
@@ -192,7 +195,9 @@ namespace ZoneColorChanger.Systems
 
 			if (GameManager.instance.localizationManager.activeDictionary.TryGetValue(titleId, out var prefabName))
 			{
-				return Regex.Replace(prefabName, "^[A-Z]{2} ", string.Empty);
+				return Mod.Settings.GroupThemes 
+					? Regex.Replace(prefabName, "^[A-Z]{2} ", string.Empty)
+					: prefabName;
 			}
 
 			return FormatWords(zone.Replace('_', ' '));
