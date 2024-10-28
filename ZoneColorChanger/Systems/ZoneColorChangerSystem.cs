@@ -67,7 +67,7 @@ namespace ZoneColorChanger.Systems
 			for (var i = 0; i < prefabData.Length; i++)
 			{
 				var prefab = prefabSystem.GetPrefab<ZonePrefab>(prefabData[i]);
-				var name = Mod.Settings.GroupThemes ? Regex.Replace(prefab.name, "^[A-Z]{2} ", string.Empty) : prefab.name;
+				var name = Mod.Settings.GroupThemes ? Regex.Replace(prefab.name, "^[A-Z]{2,3} ", string.Empty) : prefab.name;
 
 				_vanillaColors[name] = prefab.m_Color;
 
