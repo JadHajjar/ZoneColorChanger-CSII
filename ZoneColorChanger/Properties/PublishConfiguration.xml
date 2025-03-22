@@ -31,16 +31,14 @@ Thank you to Trejak and YenYang for helping out with the UI elements.
   <Screenshot Value="Properties/Screenshot_05.png" />
   <Tag Value="Code Mod" />
   <ForumLink Value="https://forum.paradoxplaza.com/forum/threads/zone-color-changer.1681601/" />
-  <ModVersion Value="1.1.0" />
-  <GameVersion Value="1.1.*" />
+  <ModVersion Value="1.2.1" />
+  <GameVersion Value="1.2.*" />
   <ChangeLog>
-# v1.1.0
+# v1.2.1
 ## Changes
-* Added an option to un-group zones' themes. This allows you to assign different colors for EU/NA zone types.
-* Reworked color-blind settings, converting it to an automatic color conversion which allows Zone Color Changer to also convert any custom zones, or future vanilla zones based on their base color.
-* Temporary folder is now cleared on startup too, instead of just on exit.
+* Compatibility with patch 1.2.4f1.
 </ChangeLog>
   <ExternalLink Type="discord" Url="https://discord.gg/E4k8ZEtRxd" />
   <ExternalLink Type="github" Url="https://github.com/JadHajjar/ZoneColorChanger-CSII" />
-  <ExternalLink Type="buymeacoffee" Url="https://www.buymeacoffee.com/tdwsvillage" />
+  <ExternalLink Type="patreon" Url="https://www.patreon.com/tdwsvillage" />
 </Publish>

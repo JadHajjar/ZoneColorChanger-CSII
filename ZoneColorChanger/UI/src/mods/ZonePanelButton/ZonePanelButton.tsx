@@ -4,6 +4,7 @@ import styles from "./ZonePanelButton.module.scss";
 import { Button } from "cs2/ui";
 import mod from "mod.json";
 import { VanillaComponentResolver } from "mods/VanillaComponentResolver/VanillaComponentResolver";
+import paintBrush from "image/paintBrush.svg";
 
 const ZoneToolActive$ = bindValue(mod.id, "ZoneToolActive", false);
 const MainPanelVisible$ = bindValue<boolean>(mod.id, "MainPanelVisible", false);
@@ -25,7 +26,7 @@ export const ZonePanelButton: ModuleRegistryExtend = (Component) => {
             onSelect={() => trigger(mod.id, "SetMainPanelVisible", !MainPanelVisible)}
             focusKey={VanillaComponentResolver.instance.FOCUS_DISABLED}
           >
-            <img src="Media/Tools/Zone Tool/Paint.svg" />
+            <img style={{ maskImage: `url('${paintBrush}')` }} />
             Edit Zone Colors
           </Button>
         </div>

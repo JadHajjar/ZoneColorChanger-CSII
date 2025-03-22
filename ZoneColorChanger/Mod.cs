@@ -17,7 +17,7 @@ namespace ZoneColorChanger
 	public class Mod : IMod
 	{
 		public const string Id = nameof(ZoneColorChanger);
-		public static ILog Log = LogManager.GetLogger(nameof(ZoneColorChanger)).SetShowsErrorsInUI(false);
+		public static ILog Log = LogManager.GetLogger(nameof(ZoneColorChanger)).SetShowsErrorsInUI(false).SetLogStackTrace(false);
 		public static Setting Settings { get; private set; }
 
 		private static bool? isAssetIconLibraryEnabled;

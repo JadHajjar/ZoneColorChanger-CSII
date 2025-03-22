@@ -10,24 +10,46 @@
   width: auto;
   border-radius: 4rem;
   margin-bottom: 2rem;
-  padding: 3rem 6rem;
+  padding: 3rem 8rem 3rem 6rem;
   font-size: 16rem;
-  background-color: rgba(88, 107, 134, 0.6);
+  background-color: var(--activeColorBright);
+  color: var(--menuText1Normal);
+  opacity: 0.8;
   border: none;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  transition: opacity 0.2s, background-color 0.2s, color 0.2s;
 }
 
 .button img {
-  width: 20rem;
-  height: 20rem;
+  width: 22rem;
+  height: 22rem;
   margin-right: 4rem;
+  mask-size: contain;
+  mask-position: 50% 50%;
+  background-color: var(--menuText1Normal);
+  transition: background-color 0.2s;
 }
 
 .button:hover {
-  background-color: rgba(88, 107, 134, 0.9);
+  opacity: 1;
+  color: var(--menuControl1--hover);
+  background-color: var(--accentColorDark-pressed);
+
+  img {
+    background-color: var(--menuControl1--hover);
+  }
 }
 
 .button:active {
+  opacity: 1;
   background: none !important;
-  background-color: var(--focusedColor) !important;
+  color: var(--menuControl1--hover);
+  background-color: var(--accentColorDark) !important;
   border-radius: 4rem !important;
+
+  img {
+    background-color: var(--menuControl1--hover);
+  }
 }

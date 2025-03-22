@@ -1,6 +1,47 @@
 [
   {
     "Stable": true,
+    "Version": "1.2.1",
+    "Date": "2024-11-26",
+    "ChangeGroups": [
+      {
+        "Name": "Changes",
+        "Changes": [
+          "Compatibility with patch 1.2.4f1."
+        ]
+      }
+    ]
+  },
+  {
+    "Stable": true,
+    "Version": "1.2",
+    "Date": "2024-11-26",
+    "ChangeGroups": [
+      {
+        "Name": "Changes",
+        "Changes": [
+          "Added support for png and custom asset thumbnails, like the Region Packs.",
+          "Fixed zone thumbnails for DLCs not being detected properly.",
+          "Compatibility with patch 1.2.0f1."
+        ]
+      }
+    ]
+  },
+  {
+    "Stable": true,
+    "Version": "1.1.1",
+    "Date": "2024-11-26",
+    "ChangeGroups": [
+      {
+        "Name": "Changes",
+        "Changes": [
+          "Compatibility with patch 1.1.12f1."
+        ]
+      }
+    ]
+  },
+  {
+    "Stable": true,
     "Version": "1.1.0",
     "Date": "2024-07-10",
     "ChangeGroups": [

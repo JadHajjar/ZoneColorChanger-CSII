@@ -191,12 +191,12 @@ namespace ZoneColorChanger.Systems
 				return name;
 			}
 
-			prefabUISystem.GetTitleAndDescription(_zonePrefabs[zone][0], out var titleId, out var _);
+			prefabUISystem.GetTitleAndDescription(prefabSystem.GetEntity(_zonePrefabs[zone][0]), out var titleId, out var _);
 
 			if (GameManager.instance.localizationManager.activeDictionary.TryGetValue(titleId, out var prefabName))
 			{
 				return Mod.Settings.GroupThemes 
-					? Regex.Replace(prefabName, "^[A-Z]{2} ", string.Empty)
+					? Regex.Replace(prefabName, "^[A-Z]{2}[ _]", string.Empty)
 					: prefabName;
 			}
 
