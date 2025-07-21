@@ -224,12 +224,14 @@ namespace ZoneColorChanger.Utilities
 			if (AssetDatabase.global.TryGetAsset<ImageAsset>(icon, out var asset)
 				|| AssetDatabase.global.TryGetAsset("assetdb://gameui/" + icon, out asset))
 			{
-				var fileName = Path.Combine(TempFolder, $"{asset.identifier}.png");
+				var fileName = Path.Combine(TempFolder, $"{asset.id.guid}.png");
 
 				if (File.Exists(fileName))
 				{
 					return fileName;
 				}
+
+				Directory.CreateDirectory(Path.GetDirectoryName(fileName));
 
 				var stream = asset.GetReadStream();
 				using var fileStream = File.Create(fileName);
