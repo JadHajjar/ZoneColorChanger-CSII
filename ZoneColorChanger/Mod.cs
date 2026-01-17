@@ -1,4 +1,5 @@
-﻿using Colossal.IO.AssetDatabase;
+﻿using Colossal.Core;
+using Colossal.IO.AssetDatabase;
 using Colossal.Logging;
 using Colossal.UI;
 
@@ -38,7 +39,7 @@ namespace ZoneColorChanger
 			updateSystem.UpdateAt<ZoneColorChangerSystem>(SystemUpdatePhase.Modification1);
 			updateSystem.UpdateAt<ZoneChangerUISystem>(SystemUpdatePhase.UIUpdate);
 
-			GameManager.instance.RegisterUpdater(PrepareThumbnails);
+			MainThreadDispatcher.RegisterUpdater(PrepareThumbnails);
 		}
 
 		private void PrepareThumbnails()

@@ -31,12 +31,12 @@ Thank you to Trejak and YenYang for helping out with the UI elements.
   <Screenshot Value="Properties/Screenshot_05.png" />
   <Tag Value="Code Mod" />
   <ForumLink Value="https://forum.paradoxplaza.com/forum/threads/zone-color-changer.1681601/" />
-  <ModVersion Value="1.2.3" />
-  <GameVersion Value="1.3.*" />
+  <ModVersion Value="1.3.0" />
+  <GameVersion Value="1.5.*" />
   <ChangeLog>
-# v1.2.3
-## Hotfix
-* Compatibility with patch 1.3.3f1.
+# v1.3.0
+## Changes
+* Moved the edit zone colors button above the zones toolbar.
 </ChangeLog>
   <ExternalLink Type="discord" Url="https://discord.gg/E4k8ZEtRxd" />
   <ExternalLink Type="github" Url="https://github.com/JadHajjar/ZoneColorChanger-CSII" />

@@ -1,6 +1,58 @@
 [
   {
     "Stable": true,
+    "Version": "1.3.0",
+    "Date": "2025-12-03",
+    "ChangeGroups": [
+      {
+        "Name": "Changes",
+        "Changes": [
+          "Moved the edit zone colors button above the zones toolbar."
+        ]
+      }
+    ]
+  },
+  {
+    "Stable": true,
+    "Version": "1.2.6",
+    "Date": "2025-12-03",
+    "ChangeGroups": [
+      {
+        "Name": "Changes",
+        "Changes": [
+          "Compatibility with patch 1.5.2f1."
+        ]
+      }
+    ]
+  },
+  {
+    "Stable": true,
+    "Version": "1.2.5",
+    "Date": "2025-11-23",
+    "ChangeGroups": [
+      {
+        "Name": "Changes",
+        "Changes": [
+          "Updated the zone toolbar button to be smaller."
+        ]
+      }
+    ]
+  },
+  {
+    "Stable": true,
+    "Version": "1.2.4",
+    "Date": "2025-10-29",
+    "ChangeGroups": [
+      {
+        "Name": "Hotfix",
+        "Changes": [
+          "Compatibility with patch 1.3.6f1."
+        ]
+      }
+    ]
+  },
+  {
+    "Stable": true,
     "Version": "1.2.3",
     "Date": "2025-06-11",
     "ChangeGroups": [

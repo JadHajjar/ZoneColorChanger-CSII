@@ -72,7 +72,7 @@ namespace ZoneColorChanger.Utilities
 			{
 				var color = ColorUtility.TryParseHtmlString(match.Value, out var hexColor) ? (HslColor)hexColor : (HslColor)Color.white;
 
-				if (math.abs(color.Hue - defaultHue) < 0.075f || (!prefab.builtin && math.abs(color.Hue - defaultZoneColorHue) < 0.125f))
+				if (math.abs(color.Hue - defaultHue) < 0.075f || (!prefab.isBuiltin && math.abs(color.Hue - defaultZoneColorHue) < 0.125f))
 				{
 					color.Hue = newColor.Hue;
 					color.Lum = Mathf.Clamp01(color.Lum + ((newColor.Lum - color.Lum) / 6));
@@ -120,7 +120,7 @@ namespace ZoneColorChanger.Utilities
 					var pixel = bitmap.GetPixel(j, i);
 					var color = (HslColor)pixel;
 
-					if (math.abs(color.Hue - defaultHue) < 0.075f || (!prefab.builtin && math.abs(color.Hue - defaultZoneColorHue) < 0.125f))
+					if (math.abs(color.Hue - defaultHue) < 0.075f || (!prefab.isBuiltin && math.abs(color.Hue - defaultZoneColorHue) < 0.125f))
 					{
 						color.Hue = newColor.Hue;
 						color.Lum = Mathf.Clamp01(color.Lum + ((newColor.Lum - color.Lum) / 6));

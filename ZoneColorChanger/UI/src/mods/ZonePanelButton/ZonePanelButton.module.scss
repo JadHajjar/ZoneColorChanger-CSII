@@ -1,20 +1,25 @@
 .container {
   position: absolute;
-  right: 48rem;
+  right: 0rem;
+  bottom: 42rem;
   height: 100%;
   display: flex;
   align-items: center;
+  animation: entry 0.2s;
 }
 
 .button {
   width: auto;
+  pointer-events: auto;
   border-radius: 4rem;
   margin-bottom: 2rem;
   padding: 3rem 8rem 3rem 6rem;
   font-size: 16rem;
-  background-color: var(--activeColorBright);
+  z-index: 10;
+  overflow: hidden;
+  background-color: var(--panelColorDark);
+  backdrop-filter: var(--panelBlur);
   color: var(--menuText1Normal);
-  opacity: 0.8;
   border: none;
   display: flex;
   align-items: center;
@@ -51,5 +56,16 @@
 
   img {
     background-color: var(--menuControl1--hover);
+  }
+}
+
+@keyframes entry {
+  0% {
+    opacity: 0;
+    bottom: 55rem;
+    right: 5rem;
+  }
+  100% {
+    opacity: 1;
   }
 }

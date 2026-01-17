@@ -1,8 +1,9 @@
 .container {
   display: flex;
+  position: relative;
   flex-direction: row;
   align-items: center;
-  font-size: 14rem;
+  font-size: 13rem;
   height: 45rem;
   border-radius: 5rem;
   padding: 0 2.5rem;
@@ -10,6 +11,17 @@
 
 .container:hover {
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+.container:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0.5rem;
+  left: 6rem;
+  right: 6rem;
+  height: 1rem;
+  background-color: var(--dividerColor);
 }
 
 .label {

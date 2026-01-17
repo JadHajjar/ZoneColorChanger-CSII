@@ -15,7 +15,7 @@ export const ZonePanelButton: ModuleRegistryExtend = (Component) => {
     const ZoneToolActive = useValue(ZoneToolActive$);
     const { children, ...otherProps } = props || {};
 
-    if (!ZoneToolActive) return <Component {...otherProps}>{children}</Component>;
+    if (!ZoneToolActive || MainPanelVisible) return <Component {...otherProps}>{children}</Component>;
 
     return (
       <>
@@ -23,7 +23,7 @@ export const ZonePanelButton: ModuleRegistryExtend = (Component) => {
           <Button
             className={styles.button}
             variant="flat"
-            onSelect={() => trigger(mod.id, "SetMainPanelVisible", !MainPanelVisible)}
+            onSelect={() => trigger(mod.id, "SetMainPanelVisible", true)}
             focusKey={VanillaComponentResolver.instance.FOCUS_DISABLED}
           >
             <img style={{ maskImage: `url('${paintBrush}')` }} />

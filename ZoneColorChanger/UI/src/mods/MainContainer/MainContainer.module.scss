@@ -14,6 +14,7 @@
   border-bottom-right-radius: var(--panelRadius);
   overflow: hidden;
   pointer-events: auto;
+  animation: panelEntry 0.2s;
 }
 
 .container > div {
@@ -58,4 +59,16 @@
 
 .dropdown > div {
   width: 250rem;
+}
+
+@keyframes panelEntry {
+  0% {
+    opacity: 0;
+    bottom: 250rem;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
 }
